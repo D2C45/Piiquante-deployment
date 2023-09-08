@@ -23,7 +23,8 @@ exports.createSauce = (req,res) => {
             });
             sauce.save()    // Enregistrement de la nouvelle sauce dans la base de données
               .then(() => res.status(201).json({ message: 'Sauce saved'}))    // Création de ressource
-              .catch(error => res.status(400).json({ error }));}               // Mauvaise requête
+              .catch(error => res.status(400).json({ error }));               // Mauvaise requête
+            }
         )
         .catch(error => console.log(error))
     } else {
